@@ -1,9 +1,10 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Processo Profissional de Atendimento</title>
+    <title>Fluxo Profissional de Atendimento</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script>
@@ -42,7 +43,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Oculta a barra de rolagem no chat mas mantém a funcionalidade */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -51,17 +51,9 @@
             scrollbar-width: none;
         }
 
-        /* Estilo para a linha do fluxograma */
         .flow-line {
             width: 2px;
             height: 24px;
-            background-color: #cbd5e1;
-            margin: 0 auto;
-        }
-        
-        .flow-line-long {
-            width: 2px;
-            height: 48px;
             background-color: #cbd5e1;
             margin: 0 auto;
         }
@@ -69,39 +61,36 @@
 </head>
 <body class="bg-slate-50 font-sans text-slate-800 antialiased">
 
-    <!-- Header da Página -->
-    <header class="bg-white shadow-sm border-b border-slate-200 sticky top-0 z-50">
-        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-2 text-brand-600 font-bold text-xl">
-                <i class="fas fa-headset"></i>
-                <span>AtendimentoPro</span>
-            </div>
-            <nav class="hidden sm:flex gap-6 text-sm font-medium text-slate-600">
-                <a href="#fluxograma" class="hover:text-brand-600 transition-colors">O Fluxo</a>
-                <a href="#simulacao" class="hover:text-brand-600 transition-colors">Simulação Prática</a>
-            </nav>
+    <!-- Header / Título Principal (Portfólio) -->
+    <header class="bg-white border-b border-slate-200 pt-16 pb-16 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            
+            <!-- Título Atualizado -->
+            <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight">
+                Fluxo Profissional de <span class="text-brand-600">Atendimento ao Cliente</span>
+            </h1>
+            
+            <!-- Objetivo do Projeto -->
+            <p class="text-slate-600 text-lg leading-relaxed max-w-2xl mx-auto border-l-4 border-brand-500 pl-4 text-left italic">
+                O objetivo deste projeto é demonstrar como uma solicitação de cliente pode ser recebida, registrada, acompanhada e finalizada com clareza, reduzindo falhas de comunicação e melhorando a experiência do atendimento.
+            </p>
+
         </div>
     </header>
 
-    <!-- Seção: Título Principal -->
-    <section class="max-w-3xl mx-auto px-4 pt-16 pb-8 text-center">
-        <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">O Fluxo Perfeito de <span class="text-brand-600">Atendimento</span></h1>
-        <p class="text-slate-600 text-lg md:text-xl">Entenda o caminho passo a passo para transformar conversas bagunçadas em um processo organizado e profissional.</p>
-    </section>
-
     <!-- Seção: Fluxograma -->
-    <section id="fluxograma" class="max-w-5xl mx-auto px-4 py-8">
+    <section id="fluxograma" class="max-w-5xl mx-auto px-4 py-12">
+        <div class="text-center mb-10">
+            <h2 class="text-2xl font-bold text-slate-800">O Processo Passo a Passo</h2>
+        </div>
         
-        <!-- Contêiner do Fluxo -->
         <div class="flex flex-col items-center w-full">
-
             <!-- Passo 1 -->
             <div class="bg-white border border-slate-200 shadow-sm rounded-xl p-5 w-full max-w-sm text-center transform transition hover:-translate-y-1 hover:shadow-md">
                 <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-3 text-slate-600">
                     <i class="fas fa-comment-dots text-lg"></i>
                 </div>
                 <h3 class="font-bold text-slate-800">1. Cliente entra em contato</h3>
-                <p class="text-sm text-slate-500 mt-1">Via WhatsApp, chat, e-mail ou outro canal.</p>
             </div>
             <div class="flow-line"></div>
 
@@ -111,7 +100,6 @@
                     <i class="fas fa-handshake text-lg"></i>
                 </div>
                 <h3 class="font-bold text-slate-800">2. Saudação e acolhimento</h3>
-                <p class="text-sm text-slate-500 mt-1">Abordagem educada, profissional e receptiva.</p>
             </div>
             <div class="flow-line"></div>
 
@@ -121,7 +109,6 @@
                     <i class="fas fa-magnifying-glass text-lg"></i>
                 </div>
                 <h3 class="font-bold text-slate-800">3. Identificação da necessidade</h3>
-                <p class="text-sm text-slate-500 mt-1">Entender claramente qual é a dúvida ou problema.</p>
             </div>
             <div class="flow-line"></div>
 
@@ -135,8 +122,6 @@
                     <span class="text-[0.7rem] bg-slate-100 text-slate-600 px-2 py-1 rounded font-medium">Dúvida</span>
                     <span class="text-[0.7rem] bg-slate-100 text-slate-600 px-2 py-1 rounded font-medium">Reclamação</span>
                     <span class="text-[0.7rem] bg-slate-100 text-slate-600 px-2 py-1 rounded font-medium">Solicitação</span>
-                    <span class="text-[0.7rem] bg-slate-100 text-slate-600 px-2 py-1 rounded font-medium">Orçamento</span>
-                    <span class="text-[0.7rem] bg-slate-100 text-slate-600 px-2 py-1 rounded font-medium">Suporte</span>
                 </div>
             </div>
             <div class="flow-line"></div>
@@ -147,7 +132,6 @@
                     <i class="fas fa-clipboard-list text-lg"></i>
                 </div>
                 <h3 class="font-bold text-slate-800">5. Registro do atendimento</h3>
-                <p class="text-sm text-slate-500 mt-1">Anotar dados, canal, tipo, prioridade e responsável.</p>
             </div>
             <div class="flow-line"></div>
 
@@ -159,124 +143,159 @@
 
             <!-- DIVISÃO DOS CAMINHOS -->
             <div class="flex flex-col md:flex-row items-start justify-center w-full max-w-3xl mt-6 gap-8 md:gap-16 relative">
-                
                 <!-- CAMINHO SIM -->
                 <div class="flex flex-col items-center w-full md:w-1/2">
-                    <div class="bg-emerald-100 text-emerald-800 px-6 py-2 rounded-full font-bold mb-4 shadow-sm">
-                        <i class="fas fa-check mr-1"></i> SIM
-                    </div>
-                    
-                    <div class="bg-white border border-emerald-200 shadow-sm rounded-xl p-4 w-full text-center mb-4">
-                        <h4 class="font-semibold text-slate-800 text-sm">Resolução imediata</h4>
-                    </div>
+                    <div class="bg-emerald-100 text-emerald-800 px-6 py-2 rounded-full font-bold mb-4 shadow-sm"><i class="fas fa-check mr-1"></i> SIM</div>
+                    <div class="bg-white border border-emerald-200 shadow-sm rounded-xl p-4 w-full text-center mb-4"><h4 class="font-semibold text-slate-800 text-sm">Resolução imediata</h4></div>
                     <div class="h-6 w-0.5 bg-slate-200 mb-4"></div>
                 </div>
 
                 <!-- CAMINHO NÃO -->
                 <div class="flex flex-col items-center w-full md:w-1/2 mt-8 md:mt-0">
-                    <div class="bg-orange-100 text-orange-800 px-6 py-2 rounded-full font-bold mb-4 shadow-sm">
-                        <i class="fas fa-times mr-1"></i> NÃO
-                    </div>
-                    
-                    <div class="bg-white border border-orange-200 shadow-sm rounded-xl p-4 w-full text-center mb-4">
-                        <h4 class="font-semibold text-slate-800 text-sm">Encaminhamento p/ responsável</h4>
-                    </div>
+                    <div class="bg-orange-100 text-orange-800 px-6 py-2 rounded-full font-bold mb-4 shadow-sm"><i class="fas fa-times mr-1"></i> NÃO</div>
+                    <div class="bg-white border border-orange-200 shadow-sm rounded-xl p-4 w-full text-center mb-4"><h4 class="font-semibold text-slate-800 text-sm">Encaminhamento p/ responsável</h4></div>
                     <div class="h-4 w-0.5 bg-slate-200 mb-4"></div>
-                    
-                    <div class="bg-white border border-orange-200 shadow-sm rounded-xl p-4 w-full text-center mb-4">
-                        <h4 class="font-semibold text-slate-800 text-sm">Acompanhamento da solicitação</h4>
-                    </div>
+                    <div class="bg-white border border-orange-200 shadow-sm rounded-xl p-4 w-full text-center mb-4"><h4 class="font-semibold text-slate-800 text-sm">Acompanhamento da solicitação</h4></div>
                     <div class="h-4 w-0.5 bg-slate-200 mb-4"></div>
-
-                    <div class="bg-white border border-orange-200 shadow-sm rounded-xl p-4 w-full text-center mb-4">
-                        <h4 class="font-semibold text-slate-800 text-sm">Retorno ao cliente</h4>
-                    </div>
+                    <div class="bg-white border border-orange-200 shadow-sm rounded-xl p-4 w-full text-center mb-4"><h4 class="font-semibold text-slate-800 text-sm">Retorno ao cliente</h4></div>
                     <div class="h-6 w-0.5 bg-slate-200 mb-4"></div>
                 </div>
-
             </div>
 
-            <!-- ETAPAS FINAIS (COMUNS AOS DOIS CAMINHOS) -->
-            <div class="bg-slate-200 text-slate-600 px-4 py-1 rounded-full text-xs font-semibold mb-6 uppercase tracking-wider">
-                Ambos os caminhos seguem para
-            </div>
+            <!-- ETAPAS FINAIS -->
+            <div class="bg-slate-200 text-slate-600 px-4 py-1 rounded-full text-xs font-semibold mb-6 uppercase tracking-wider">Ambos os caminhos seguem para</div>
 
             <div class="bg-white border border-slate-200 shadow-sm rounded-xl p-4 w-full max-w-sm text-center mb-4">
-                <i class="fas fa-thumbs-up text-brand-500 mb-1"></i>
-                <h4 class="font-semibold text-slate-800">Confirmação com o cliente</h4>
+                <h4 class="font-semibold text-slate-800"><i class="fas fa-thumbs-up text-brand-500 mr-2"></i>Confirmação com o cliente</h4>
             </div>
             <div class="h-4 w-0.5 bg-slate-200 mb-4"></div>
-
             <div class="bg-white border border-slate-200 shadow-sm rounded-xl p-4 w-full max-w-sm text-center mb-4">
-                <i class="fas fa-door-closed text-slate-500 mb-1"></i>
-                <h4 class="font-semibold text-slate-800">Encerramento do atendimento</h4>
+                <h4 class="font-semibold text-slate-800"><i class="fas fa-door-closed text-slate-500 mr-2"></i>Encerramento do atendimento</h4>
             </div>
             <div class="h-4 w-0.5 bg-slate-200 mb-4"></div>
-
             <div class="bg-white border border-slate-200 shadow-sm rounded-xl p-4 w-full max-w-sm text-center mb-4">
-                <i class="fas fa-star text-yellow-400 mb-1"></i>
-                <h4 class="font-semibold text-slate-800">Pesquisa de satisfação</h4>
+                <h4 class="font-semibold text-slate-800"><i class="fas fa-star text-yellow-400 mr-2"></i>Pesquisa de satisfação</h4>
             </div>
-            <div class="h-4 w-0.5 bg-slate-200 mb-4"></div>
-
-            <div class="bg-slate-800 text-white shadow-sm rounded-full px-8 py-3 font-bold">
-                FIM
-            </div>
-
         </div>
     </section>
 
     <!-- Transição Visual -->
-    <div class="w-full bg-gradient-to-b from-slate-50 to-brand-50 py-12 text-center border-t border-slate-200 mt-12">
-        <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-3">Veja como funciona na prática</h2>
-        <p class="text-slate-600">Simule a conversa abaixo para ver o roteiro em ação.</p>
-        <i class="fas fa-chevron-down text-brand-500 text-2xl mt-6 animate-bounce"></i>
+    <div class="w-full bg-gradient-to-b from-slate-50 to-brand-50 py-10 text-center border-t border-slate-200">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-2">Simulação na Prática</h2>
+        <p class="text-slate-600">Acompanhe a aplicação do fluxo em uma conversa simulada.</p>
     </div>
 
     <!-- Seção: Simulação do Chat -->
-    <section id="simulacao" class="bg-brand-50 w-full py-16 flex justify-center px-4 border-b border-slate-200">
-        
-        <!-- Mockup do Celular -->
-        <div class="w-full max-w-sm h-[800px] bg-white rounded-[2.5rem] shadow-2xl flex flex-col relative overflow-hidden border-[6px] border-white outline outline-1 outline-slate-300">
-            
+    <section id="simulacao" class="bg-brand-50 w-full py-12 flex justify-center px-4 border-b border-slate-200">
+        <div class="w-full max-w-sm h-[700px] bg-white rounded-[2.5rem] shadow-2xl flex flex-col relative overflow-hidden border-[6px] border-white outline outline-1 outline-slate-300">
             <!-- Header do Chat -->
             <div class="bg-brand-600 text-white p-4 flex items-center gap-3 shadow-md z-10 shrink-0">
-                <div class="w-11 h-11 bg-white text-brand-600 rounded-full flex items-center justify-center font-bold text-lg shadow-sm">
-                    J
-                </div>
+                <div class="w-11 h-11 bg-white text-brand-600 rounded-full flex items-center justify-center font-bold text-lg shadow-sm">J</div>
                 <div class="flex flex-col">
                     <h2 class="font-semibold text-base leading-tight">João (Cliente)</h2>
-                    <span class="text-brand-200 text-xs flex items-center gap-1">
-                        <span class="w-2 h-2 bg-green-400 rounded-full inline-block"></span> Online
-                    </span>
-                </div>
-                <div class="ml-auto flex gap-3 text-brand-200">
-                    <i class="fas fa-video cursor-pointer hover:text-white transition-colors"></i>
-                    <i class="fas fa-phone cursor-pointer hover:text-white transition-colors"></i>
+                    <span class="text-brand-200 text-xs flex items-center gap-1"><span class="w-2 h-2 bg-green-400 rounded-full inline-block"></span> Online</span>
                 </div>
             </div>
 
             <!-- Área de Mensagens -->
             <div id="chat-body" class="flex-1 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-slate-100 p-4 overflow-y-auto flex flex-col gap-4 no-scrollbar scroll-smooth pb-6">
                 <div class="text-center text-xs text-slate-400 font-medium my-2 bg-slate-200/50 w-fit mx-auto px-3 py-1 rounded-full">Hoje</div>
-                <!-- Mensagens serão inseridas aqui via JavaScript -->
             </div>
 
             <!-- Footer com Botão de Ação -->
             <div class="bg-white p-4 border-t border-slate-100 shrink-0 z-10 pb-6">
-                <button id="btn-avancar" onclick="proximaMensagem()" class="w-full bg-brand-600 hover:bg-brand-700 active:scale-[0.98] transition-all duration-200 text-white font-medium py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm disabled:bg-slate-300 disabled:text-slate-500 disabled:cursor-not-allowed disabled:transform-none">
-                    <span>Iniciar Simulação da Conversa</span>
+                <button id="btn-avancar" onclick="proximaMensagem()" class="w-full bg-brand-600 hover:bg-brand-700 active:scale-[0.98] transition-all duration-200 text-white font-medium py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm disabled:bg-slate-300 disabled:text-slate-500 disabled:cursor-not-allowed">
+                    <span>Iniciar Simulação</span>
                     <i class="fas fa-play text-sm"></i>
                 </button>
             </div>
-            
+        </div>
+    </section>
+
+    <!-- Nova Seção: Registro e Indicadores -->
+    <section class="max-w-5xl mx-auto px-4 py-16">
+        <div class="text-center mb-10">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-800">Controle e Organização da Demanda</h2>
+            <p class="text-slate-600 mt-2">Como essa conversa se transforma em dados gerenciais.</p>
         </div>
 
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            
+            <!-- Card de Registro Prático -->
+            <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 md:p-8 hover:shadow-md transition-shadow">
+                <div class="flex items-center gap-3 mb-6 pb-4 border-b border-slate-100">
+                    <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl"><i class="fas fa-file-invoice"></i></div>
+                    <h3 class="font-bold text-lg text-slate-800">Registro Prático da Demanda</h3>
+                </div>
+                
+                <ul class="space-y-4 text-sm md:text-base text-slate-600">
+                    <li class="flex justify-between border-b border-slate-50 pb-2"><strong class="text-slate-800">Cliente:</strong> <span>João</span></li>
+                    <li class="flex justify-between border-b border-slate-50 pb-2"><strong class="text-slate-800">Canal:</strong> <span><i class="fab fa-whatsapp text-green-500 mr-1"></i> WhatsApp</span></li>
+                    <li class="flex justify-between border-b border-slate-50 pb-2"><strong class="text-slate-800">Tipo de demanda:</strong> <span>Dúvida sobre o serviço</span></li>
+                    <li class="flex justify-between border-b border-slate-50 pb-2"><strong class="text-slate-800">Prioridade:</strong> <span class="bg-amber-100 text-amber-800 px-2 py-0.5 rounded font-medium text-xs md:text-sm">Média</span></li>
+                    <li class="flex justify-between border-b border-slate-50 pb-2"><strong class="text-slate-800">Status:</strong> <span class="bg-emerald-100 text-emerald-800 px-2 py-0.5 rounded font-medium text-xs md:text-sm">Resolvido</span></li>
+                    <li class="flex flex-col border-b border-slate-50 pb-2">
+                        <strong class="text-slate-800 mb-1">Solução aplicada:</strong> 
+                        <span class="bg-slate-50 p-2 rounded text-slate-600">Cliente orientado e solicitação registrada no sistema.</span>
+                    </li>
+                    <li class="flex justify-between items-center pt-2"><strong class="text-slate-800">Nota de satisfação:</strong> <span class="text-lg font-bold text-slate-800">9/10 <i class="fas fa-star text-yellow-400 text-sm"></i></span></li>
+                </ul>
+            </div>
+
+            <!-- Painel de Indicadores -->
+            <div class="flex flex-col h-full">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center text-xl"><i class="fas fa-chart-pie"></i></div>
+                    <h3 class="font-bold text-lg text-slate-800">Indicadores de Desempenho</h3>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 text-center flex flex-col justify-center items-center hover:border-brand-300 transition-colors">
+                        <i class="fas fa-stopwatch text-slate-400 mb-2"></i>
+                        <div class="text-3xl font-bold text-brand-600 mb-1">12 min</div>
+                        <div class="text-xs font-medium text-slate-500 uppercase tracking-wide">Tempo Médio de Resposta</div>
+                    </div>
+                    
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 text-center flex flex-col justify-center items-center hover:border-brand-300 transition-colors">
+                        <i class="fas fa-check-circle text-slate-400 mb-2"></i>
+                        <div class="text-3xl font-bold text-emerald-500 mb-1">86%</div>
+                        <div class="text-xs font-medium text-slate-500 uppercase tracking-wide">Atendimentos Resolvidos</div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 text-center flex flex-col justify-center items-center hover:border-brand-300 transition-colors">
+                        <i class="fas fa-inbox text-slate-400 mb-2"></i>
+                        <div class="text-3xl font-bold text-amber-500 mb-1">7</div>
+                        <div class="text-xs font-medium text-slate-500 uppercase tracking-wide">Demandas Pendentes</div>
+                    </div>
+
+                    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-5 text-center flex flex-col justify-center items-center hover:border-brand-300 transition-colors">
+                        <i class="fas fa-heart text-slate-400 mb-2"></i>
+                        <div class="text-3xl font-bold text-brand-600 mb-1">9,1</div>
+                        <div class="text-xs font-medium text-slate-500 uppercase tracking-wide">Nota Média de Satisfação</div>
+                    </div>
+                </div>
+                
+                <div class="mt-4 text-right">
+                    <p class="text-[0.75rem] text-slate-400 italic"><i class="fas fa-info-circle mr-1"></i> Dados fictícios criados apenas para demonstração do projeto.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Conclusão Forte -->
+    <section class="bg-slate-900 text-white py-20 px-4 text-center border-t-4 border-brand-500">
+        <div class="max-w-4xl mx-auto flex flex-col items-center">
+            <i class="fas fa-quote-left text-brand-500 text-4xl mb-6 opacity-80"></i>
+            <p class="text-xl md:text-2xl font-medium leading-relaxed tracking-wide text-slate-100">
+                Este projeto demonstra como um atendimento simples pode ser transformado em um processo organizado, mensurável e orientado à experiência do cliente. O foco não é apenas responder mensagens, mas garantir clareza, acompanhamento e melhoria contínua.
+            </p>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-white text-center py-8 text-slate-500 text-sm">
-        <p>Criado para demonstração do fluxo de atendimento profissional.</p>
+    <footer class="bg-slate-950 text-center py-8 text-slate-500 text-sm">
+        <p>&copy; Desenvolvido por <strong>Arthur Silva Rocha</strong> para portfólio profissional.</p>
     </footer>
 
     <!-- Script do Chat Interativo -->
@@ -328,11 +347,9 @@
         function criarMensagemElemento(mensagemData) {
             const divWrapper = document.createElement('div');
             const ehCliente = mensagemData.autor === 'cliente';
-            
             divWrapper.className = `flex w-full ${ehCliente ? 'justify-start' : 'justify-end'} animate-fade-in-up opacity-0`;
             
             const divMensagem = document.createElement('div');
-            
             let classesBalao = 'max-w-[85%] px-4 py-2.5 text-[0.95rem] shadow-sm relative whitespace-pre-wrap leading-relaxed ';
             
             if (ehCliente) {
@@ -362,14 +379,12 @@
             
             divMensagem.appendChild(divMetaInfo);
             divWrapper.appendChild(divMensagem);
-            
             return divWrapper;
         }
 
         function mostrarDigitando() {
             return new Promise(resolve => {
                 const ehCliente = scriptConversa[indiceAtual].autor === 'cliente';
-                
                 const divWrapper = document.createElement('div');
                 divWrapper.id = 'indicador-digitando';
                 divWrapper.className = `flex w-full ${ehCliente ? 'justify-start' : 'justify-end'} animate-fade-in-up`;
@@ -378,7 +393,6 @@
                 divBalao.className = `px-4 py-3 shadow-sm flex gap-1 items-center ${ehCliente ? 'bg-white rounded-2xl rounded-bl-sm border border-slate-100' : 'bg-brand-600 rounded-2xl rounded-br-sm'}`;
                 
                 const corBolinha = ehCliente ? 'bg-slate-400' : 'bg-white';
-                
                 divBalao.innerHTML = `
                     <div class="w-1.5 h-1.5 rounded-full ${corBolinha} animate-bounce" style="animation-delay: 0ms"></div>
                     <div class="w-1.5 h-1.5 rounded-full ${corBolinha} animate-bounce" style="animation-delay: 150ms"></div>
@@ -398,7 +412,6 @@
 
         async function proximaMensagem() {
             if (indiceAtual >= scriptConversa.length) return;
-            
             btnAvancar.disabled = true;
             
             if (indiceAtual === 0) {
@@ -406,17 +419,13 @@
             }
 
             await mostrarDigitando();
-
             const mensagemData = scriptConversa[indiceAtual];
             const elementoMensagem = criarMensagemElemento(mensagemData);
             
             chatBody.appendChild(elementoMensagem);
             
             setTimeout(() => {
-                chatBody.scrollTo({
-                    top: chatBody.scrollHeight,
-                    behavior: 'smooth'
-                });
+                chatBody.scrollTo({ top: chatBody.scrollHeight, behavior: 'smooth' });
             }, 50);
             
             indiceAtual++;
@@ -431,3 +440,6 @@
     </script>
 </body>
 </html>
+
+
+```
