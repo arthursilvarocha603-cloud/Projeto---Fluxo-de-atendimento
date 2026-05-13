@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processo Profissional de Atendimento</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            500: '#3b82f6',
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                        }
+                    },
+                    keyframes: {
+                        'fade-in-up': {
+                            '0%': { opacity: '0', transform: 'translateY(15px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fade-in-up 0.4s ease-out forwards',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Oculta a barra de rolagem no chat mas mantém a funcionalidade */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Estilo para a linha do fluxograma */
+        .flow-line {
+            width: 2px;
+            height: 24px;
+            background-color: #cbd5e1;
+            margin: 0 auto;
+        }
+        
+        .flow-line-long {
+            width: 2px;
+            height: 48px;
+            background-color: #cbd5e1;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased">
+
+    <!-- Header da Página -->
+    <header class="bg-white shadow-sm border-b border-slate-200 sticky top-0 z-50">
+        <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2 text-brand-600 font-bold text-xl">
+                <i class="fas fa-headset"></i>
+                <span>AtendimentoPro</span>
+            </div>
+            <nav class="hidden sm:flex gap-6 text-sm font-medium text-slate-600">
+                <a href="#fluxograma" class="hover:text-brand-600 transition-colors">O Fluxo</a>
+                <a href="#simulacao" class="hover:text-brand-600 transition-colors">Simulação Prática</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Seção: Título Principal -->
+    <section class="max-w-3xl mx-auto px-4 pt-16 pb-8 text-center">
+        <h1 class="text-3xl md:text-5xl font-bold text-slate-900 mb-4 tracking-tight">O Fluxo Perfeito de <span class="text-brand-600">Atendimento</span></h1>
+        <p class="text-slate-600 text-lg md:text-xl">Entenda o caminho passo a passo para transformar conversas bagunçadas em um processo organizado e profissional.</p>
+    </section>
+
+    <!-- Seção: Fluxograma -->
+    <section id="fluxograma" class="max-w-5xl mx-auto px-4 py-8">
+        
+        <!-- Contêiner do Fluxo -->
+        <div class="flex flex-col items-center w-full">
+
+            <!-- Passo 1 -->
+            <div class="bg-white border border-slate-200 shadow-sm rounded-xl p-5 w-full max-w-sm text-center transform transition hover:-translate-y-1 hover:shadow-md">
+                <div class="w-10 h-10 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-3 text-slate-600">
+                    <i class="fas fa-comment-dots text-lg"></i>
+                </div>
+                <h3 class="font-bold text-slate-800">1. Cliente entra em contato</h3>
+                <p class="text-sm text-slate-500 mt-1">Via WhatsApp, chat, e-mail ou outro canal.</p>
+            </div>
+            <div class="flow-line"></div>
+
+            <!-- Passo 2 -->
+            <div class="bg-white border border-slate-200 shadow-sm rounded-xl p-5 w-full max-w-sm text-center transform transition hover:-translate-y-1 hover:shadow-md">
+                <div class="w-10 h-10 bg-brand-50 rounded-full flex items-center justify-center mx-auto mb-3 text-brand-600">
+                    <i class="fas fa-handshake text-lg"></i>
+                </div>
+                <h3 class="font-bold text-slate-800">2. Saudação e acolhimento</h3>
+                <p class="text-sm text-slate-500 mt-1">Abordagem educada, profissional e receptiva.</p>
+            </div>
+            <div class="flow-line"></div>
+
+            <!-- Passo 3 -->
+            <div class="bg-white border border-slate-200 shadow-sm rounded-xl p-5 w-full max-w-sm text-center transform transition hover:-translate-y-1 hover:shadow-md">
+                <div class="w-10 h-10 bg-purple-50 rounded-full flex items-center justify-center mx-auto mb-3 text-purple-600">
+                    <i class="fas fa-magnifying-glass text-lg"></i>
+                </div>
+                <h3 class="font-bold text-slate-800">3. Identificação da necessidade</h3>
+                <p class="text-sm text-slate-500 mt-1">Entender claramente qual é a dúvida ou problema.</p>
+            </div>
+            <div class="flow-line"></div>
+
+            <!-- Passo 4 -->
+            <div class="bg-white border border-slate-200 shadow-sm rounded-xl p-5 w-full max-w-md text-center transform transition hover:-translate-y-1 hover:shadow-md">
+                <div class="w-10 h-10 bg-amber-50 rounded-full flex items-center justify-center mx-auto mb-3 text-amber-600">
+                    <i class="fas fa-tags text-lg"></i>
+                </div>
+                <h3 class="font-bold text-slate-800 mb-2">4. Classificação da demanda</h3>
+                <div class="flex flex-wrap justify-center gap-2 mt-2">
+                    <span class="text-[0.7rem] bg-slate-100 text-slate-600 px-2 py-1 rounded font-medium">Dúvida</span>
+                    <span class="text-[0.7rem] bg-slate-100 text-slate-600 px-2 py-1 rounded font-medium">Reclamação</span>
+                    <span class="text-[0.7rem] bg-slate-100 text-slate-600 px-2 py-1 rounded font-medium">Solicitação</span>
+                    <span class="text-[0.7rem] bg-slate-100 text-slate-600 px-2 py-1 rounded font-medium">Orçamento</span>
+                    <span class="text-[0.7rem] bg-slate-100 text-slate-600 px-2 py-1 rounded font-medium">Suporte</span>
+                </div>
+            </div>
+            <div class="flow-line"></div>
+
+            <!-- Passo 5 -->
+            <div class="bg-white border border-slate-200 shadow-sm rounded-xl p-5 w-full max-w-sm text-center transform transition hover:-translate-y-1 hover:shadow-md">
+                <div class="w-10 h-10 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-3 text-emerald-600">
+                    <i class="fas fa-clipboard-list text-lg"></i>
+                </div>
+                <h3 class="font-bold text-slate-800">5. Registro do atendimento</h3>
+                <p class="text-sm text-slate-500 mt-1">Anotar dados, canal, tipo, prioridade e responsável.</p>
+            </div>
+            <div class="flow-line"></div>
+
+            <!-- PERGUNTA DECISÃO -->
+            <div class="bg-slate-800 text-white shadow-lg rounded-xl p-5 w-full max-w-sm text-center relative z-10">
+                <i class="fas fa-code-branch text-brand-400 mb-2 text-xl"></i>
+                <h3 class="font-bold text-lg">A demanda pode ser resolvida no 1º contato?</h3>
+            </div>
+
+            <!-- DIVISÃO DOS CAMINHOS -->
+            <div class="flex flex-col md:flex-row items-start justify-center w-full max-w-3xl mt-6 gap-8 md:gap-16 relative">
+                
+                <!-- CAMINHO SIM -->
+                <div class="flex flex-col items-center w-full md:w-1/2">
+                    <div class="bg-emerald-100 text-emerald-800 px-6 py-2 rounded-full font-bold mb-4 shadow-sm">
+                        <i class="fas fa-check mr-1"></i> SIM
+                    </div>
+                    
+                    <div class="bg-white border border-emerald-200 shadow-sm rounded-xl p-4 w-full text-center mb-4">
+                        <h4 class="font-semibold text-slate-800 text-sm">Resolução imediata</h4>
+                    </div>
+                    <div class="h-6 w-0.5 bg-slate-200 mb-4"></div>
+                </div>
+
+                <!-- CAMINHO NÃO -->
+                <div class="flex flex-col items-center w-full md:w-1/2 mt-8 md:mt-0">
+                    <div class="bg-orange-100 text-orange-800 px-6 py-2 rounded-full font-bold mb-4 shadow-sm">
+                        <i class="fas fa-times mr-1"></i> NÃO
+                    </div>
+                    
+                    <div class="bg-white border border-orange-200 shadow-sm rounded-xl p-4 w-full text-center mb-4">
+                        <h4 class="font-semibold text-slate-800 text-sm">Encaminhamento p/ responsável</h4>
+                    </div>
+                    <div class="h-4 w-0.5 bg-slate-200 mb-4"></div>
+                    
+                    <div class="bg-white border border-orange-200 shadow-sm rounded-xl p-4 w-full text-center mb-4">
+                        <h4 class="font-semibold text-slate-800 text-sm">Acompanhamento da solicitação</h4>
+                    </div>
+                    <div class="h-4 w-0.5 bg-slate-200 mb-4"></div>
+
+                    <div class="bg-white border border-orange-200 shadow-sm rounded-xl p-4 w-full text-center mb-4">
+                        <h4 class="font-semibold text-slate-800 text-sm">Retorno ao cliente</h4>
+                    </div>
+                    <div class="h-6 w-0.5 bg-slate-200 mb-4"></div>
+                </div>
+
+            </div>
+
+            <!-- ETAPAS FINAIS (COMUNS AOS DOIS CAMINHOS) -->
+            <div class="bg-slate-200 text-slate-600 px-4 py-1 rounded-full text-xs font-semibold mb-6 uppercase tracking-wider">
+                Ambos os caminhos seguem para
+            </div>
+
+            <div class="bg-white border border-slate-200 shadow-sm rounded-xl p-4 w-full max-w-sm text-center mb-4">
+                <i class="fas fa-thumbs-up text-brand-500 mb-1"></i>
+                <h4 class="font-semibold text-slate-800">Confirmação com o cliente</h4>
+            </div>
+            <div class="h-4 w-0.5 bg-slate-200 mb-4"></div>
+
+            <div class="bg-white border border-slate-200 shadow-sm rounded-xl p-4 w-full max-w-sm text-center mb-4">
+                <i class="fas fa-door-closed text-slate-500 mb-1"></i>
+                <h4 class="font-semibold text-slate-800">Encerramento do atendimento</h4>
+            </div>
+            <div class="h-4 w-0.5 bg-slate-200 mb-4"></div>
+
+            <div class="bg-white border border-slate-200 shadow-sm rounded-xl p-4 w-full max-w-sm text-center mb-4">
+                <i class="fas fa-star text-yellow-400 mb-1"></i>
+                <h4 class="font-semibold text-slate-800">Pesquisa de satisfação</h4>
+            </div>
+            <div class="h-4 w-0.5 bg-slate-200 mb-4"></div>
+
+            <div class="bg-slate-800 text-white shadow-sm rounded-full px-8 py-3 font-bold">
+                FIM
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Transição Visual -->
+    <div class="w-full bg-gradient-to-b from-slate-50 to-brand-50 py-12 text-center border-t border-slate-200 mt-12">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-3">Veja como funciona na prática</h2>
+        <p class="text-slate-600">Simule a conversa abaixo para ver o roteiro em ação.</p>
+        <i class="fas fa-chevron-down text-brand-500 text-2xl mt-6 animate-bounce"></i>
+    </div>
+
+    <!-- Seção: Simulação do Chat -->
+    <section id="simulacao" class="bg-brand-50 w-full py-16 flex justify-center px-4 border-b border-slate-200">
+        
+        <!-- Mockup do Celular -->
+        <div class="w-full max-w-sm h-[800px] bg-white rounded-[2.5rem] shadow-2xl flex flex-col relative overflow-hidden border-[6px] border-white outline outline-1 outline-slate-300">
+            
+            <!-- Header do Chat -->
+            <div class="bg-brand-600 text-white p-4 flex items-center gap-3 shadow-md z-10 shrink-0">
+                <div class="w-11 h-11 bg-white text-brand-600 rounded-full flex items-center justify-center font-bold text-lg shadow-sm">
+                    J
+                </div>
+                <div class="flex flex-col">
+                    <h2 class="font-semibold text-base leading-tight">João (Cliente)</h2>
+                    <span class="text-brand-200 text-xs flex items-center gap-1">
+                        <span class="w-2 h-2 bg-green-400 rounded-full inline-block"></span> Online
+                    </span>
+                </div>
+                <div class="ml-auto flex gap-3 text-brand-200">
+                    <i class="fas fa-video cursor-pointer hover:text-white transition-colors"></i>
+                    <i class="fas fa-phone cursor-pointer hover:text-white transition-colors"></i>
+                </div>
+            </div>
+
+            <!-- Área de Mensagens -->
+            <div id="chat-body" class="flex-1 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-slate-100 p-4 overflow-y-auto flex flex-col gap-4 no-scrollbar scroll-smooth pb-6">
+                <div class="text-center text-xs text-slate-400 font-medium my-2 bg-slate-200/50 w-fit mx-auto px-3 py-1 rounded-full">Hoje</div>
+                <!-- Mensagens serão inseridas aqui via JavaScript -->
+            </div>
+
+            <!-- Footer com Botão de Ação -->
+            <div class="bg-white p-4 border-t border-slate-100 shrink-0 z-10 pb-6">
+                <button id="btn-avancar" onclick="proximaMensagem()" class="w-full bg-brand-600 hover:bg-brand-700 active:scale-[0.98] transition-all duration-200 text-white font-medium py-3.5 px-4 rounded-xl flex items-center justify-center gap-2 shadow-sm disabled:bg-slate-300 disabled:text-slate-500 disabled:cursor-not-allowed disabled:transform-none">
+                    <span>Iniciar Simulação da Conversa</span>
+                    <i class="fas fa-play text-sm"></i>
+                </button>
+            </div>
+            
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white text-center py-8 text-slate-500 text-sm">
+        <p>Criado para demonstração do fluxo de atendimento profissional.</p>
+    </footer>
+
+    <!-- Script do Chat Interativo -->
+    <script>
+        const scriptConversa = [
+            { autor: 'cliente', texto: 'Olá, boa tarde. Vi uma divulgação sobre organização de atendimento e queria entender melhor como isso funcionaria.' },
+            { autor: 'atendente', texto: 'Olá, boa tarde! Seja bem-vindo ao atendimento. Meu nome é Arthur Rocha e vou te ajudar.\n\nAntes de te explicar a solução, posso entender melhor qual é a principal dificuldade que você enfrenta hoje no atendimento?' },
+            { autor: 'cliente', texto: 'Tenho uma pequena empresa e atendo pelo WhatsApp. O problema é que chegam muitas mensagens, algumas ficam sem resposta e às vezes eu esqueço de retornar para o cliente.' },
+            { autor: 'atendente', texto: 'Entendi. Então o principal problema não é apenas responder mensagens, mas manter controle sobre cada solicitação até ela ser resolvida, certo?' },
+            { autor: 'cliente', texto: 'Exatamente. Às vezes o cliente pergunta uma coisa simples, mas como não tem organização, acaba virando confusão.' },
+            { autor: 'atendente', texto: 'Isso acontece bastante quando o atendimento depende só da memória ou de conversas soltas no WhatsApp.\n\nO ideal seria criar um fluxo simples para cada atendimento seguir o mesmo padrão: receber, entender, registrar, resolver ou encaminhar e depois confirmar com o cliente.' },
+            { autor: 'cliente', texto: 'E como eu poderia fazer isso na prática?' },
+            { autor: 'atendente', texto: 'Uma forma inicial seria usar uma planilha de controle. Cada atendimento teria um registro com data, nome do cliente, canal de contato, tipo de solicitação, prioridade, status, responsável e solução aplicada.' },
+            { autor: 'cliente', texto: 'Mas isso não deixaria o atendimento mais demorado?' },
+            { autor: 'atendente', texto: 'Na verdade, a ideia é o contrário. No começo exige um pouco de disciplina, mas depois reduz retrabalho, evita esquecimento e deixa claro o que está pendente, o que já foi resolvido e o que precisa de prioridade.' },
+            { autor: 'cliente', texto: 'Entendi. E como eu saberia quais atendimentos são mais urgentes?' },
+            { autor: 'atendente', texto: 'A demanda pode ser classificada por prioridade.\n\nPor exemplo: uma dúvida simples pode ser prioridade baixa; uma reclamação ou cliente aguardando retorno pode ser prioridade média ou alta.\n\nAssim, o atendimento deixa de ser feito apenas por ordem de chegada e passa a considerar impacto e urgência.' },
+            { autor: 'cliente', texto: 'Faz sentido. E se eu não conseguir resolver na hora?' },
+            { autor: 'atendente', texto: 'Nesse caso, o atendimento deve ser encaminhado, mas sem perder o controle.\n\nO status poderia mudar para "encaminhado" ou "em andamento", e seria definido um responsável pelo retorno. O importante é o cliente não ficar sem resposta.' },
+            { autor: 'cliente', texto: 'Esse é um dos meus maiores problemas. Às vezes eu vejo a mensagem, deixo para responder depois e acabo esquecendo.' },
+            { autor: 'atendente', texto: 'Por isso o registro é importante. Ele funciona como uma memória do atendimento.\n\nAlém disso, você pode acompanhar indicadores, como quantidade de atendimentos pendentes, tempo médio de resposta e principais motivos de contato.' },
+            { autor: 'cliente', texto: 'Então eu conseguiria saber quais problemas mais aparecem?' },
+            { autor: 'atendente', texto: 'Sim. Com os dados organizados, você consegue identificar padrões.\n\nPor exemplo: se muitos clientes perguntam sobre prazo, talvez a comunicação inicial não esteja clara. Se muitos reclamam de demora, o problema pode estar no tempo de resposta. A partir disso, dá para melhorar o processo.' },
+            { autor: 'cliente', texto: 'Gostei. Isso parece mais profissional do que só responder mensagem.' },
+            { autor: 'atendente', texto: 'Exatamente. Um bom atendimento não é apenas responder rápido. É conduzir o cliente com clareza, registrar a solicitação, acompanhar a solução e garantir que ele recebeu uma resposta útil.' },
+            { autor: 'cliente', texto: 'E no final do atendimento, o que eu deveria fazer?' },
+            { autor: 'atendente', texto: 'O ideal é confirmar se a dúvida foi resolvida e encerrar de forma cordial.\n\nDepois, você pode aplicar uma pergunta simples de satisfação, como: "De 0 a 10, qual nota você daria para este atendimento?"' },
+            { autor: 'cliente', texto: 'Entendi. Então o fluxo seria: receber, entender, registrar, resolver e medir a satisfação.' },
+            { autor: 'atendente', texto: 'Perfeito. Esse é o resumo do processo.\n\nCom esse fluxo, o atendimento fica mais organizado, o cliente recebe uma resposta melhor e a empresa passa a ter dados para melhorar continuamente.' },
+            { autor: 'cliente', texto: 'Ótimo, era exatamente isso que eu precisava entender.' },
+            { autor: 'atendente', texto: 'Fico feliz em ajudar. Antes de finalizar, posso confirmar se sua dúvida foi esclarecida?' },
+            { autor: 'cliente', texto: 'Sim, foi esclarecida.' },
+            { autor: 'atendente', texto: 'Excelente. Para registrar sua experiência, de 0 a 10, qual nota você daria para este atendimento?' },
+            { autor: 'cliente', texto: '9.' },
+            { autor: 'atendente', texto: 'Muito obrigado pela avaliação. Sua opinião ajuda a melhorar o atendimento.\n\nFico à disposição sempre que precisar.' }
+        ];
+
+        let indiceAtual = 0;
+        const chatBody = document.getElementById('chat-body');
+        const btnAvancar = document.getElementById('btn-avancar');
+
+        function formatarHora() {
+            const agora = new Date();
+            const horas = agora.getHours().toString().padStart(2, '0');
+            const minutos = agora.getMinutes().toString().padStart(2, '0');
+            return `${horas}:${minutos}`;
+        }
+
+        function criarMensagemElemento(mensagemData) {
+            const divWrapper = document.createElement('div');
+            const ehCliente = mensagemData.autor === 'cliente';
+            
+            divWrapper.className = `flex w-full ${ehCliente ? 'justify-start' : 'justify-end'} animate-fade-in-up opacity-0`;
+            
+            const divMensagem = document.createElement('div');
+            
+            let classesBalao = 'max-w-[85%] px-4 py-2.5 text-[0.95rem] shadow-sm relative whitespace-pre-wrap leading-relaxed ';
+            
+            if (ehCliente) {
+                classesBalao += 'bg-white text-slate-800 rounded-2xl rounded-bl-sm border border-slate-100';
+            } else {
+                classesBalao += 'bg-brand-600 text-white rounded-2xl rounded-br-sm';
+            }
+            
+            divMensagem.className = classesBalao;
+            
+            const spanTexto = document.createElement('span');
+            spanTexto.innerText = mensagemData.texto;
+            divMensagem.appendChild(spanTexto);
+            
+            const divMetaInfo = document.createElement('div');
+            divMetaInfo.className = `flex items-center justify-end gap-1 mt-1 text-[0.65rem] ${ehCliente ? 'text-slate-400' : 'text-brand-200'}`;
+            
+            const spanHora = document.createElement('span');
+            spanHora.innerText = formatarHora();
+            divMetaInfo.appendChild(spanHora);
+            
+            if (!ehCliente) {
+                const iconCheck = document.createElement('i');
+                iconCheck.className = 'fas fa-check-double text-[0.6rem]';
+                divMetaInfo.appendChild(iconCheck);
+            }
+            
+            divMensagem.appendChild(divMetaInfo);
+            divWrapper.appendChild(divMensagem);
+            
+            return divWrapper;
+        }
+
+        function mostrarDigitando() {
+            return new Promise(resolve => {
+                const ehCliente = scriptConversa[indiceAtual].autor === 'cliente';
+                
+                const divWrapper = document.createElement('div');
+                divWrapper.id = 'indicador-digitando';
+                divWrapper.className = `flex w-full ${ehCliente ? 'justify-start' : 'justify-end'} animate-fade-in-up`;
+                
+                const divBalao = document.createElement('div');
+                divBalao.className = `px-4 py-3 shadow-sm flex gap-1 items-center ${ehCliente ? 'bg-white rounded-2xl rounded-bl-sm border border-slate-100' : 'bg-brand-600 rounded-2xl rounded-br-sm'}`;
+                
+                const corBolinha = ehCliente ? 'bg-slate-400' : 'bg-white';
+                
+                divBalao.innerHTML = `
+                    <div class="w-1.5 h-1.5 rounded-full ${corBolinha} animate-bounce" style="animation-delay: 0ms"></div>
+                    <div class="w-1.5 h-1.5 rounded-full ${corBolinha} animate-bounce" style="animation-delay: 150ms"></div>
+                    <div class="w-1.5 h-1.5 rounded-full ${corBolinha} animate-bounce" style="animation-delay: 300ms"></div>
+                `;
+                
+                divWrapper.appendChild(divBalao);
+                chatBody.appendChild(divWrapper);
+                chatBody.scrollTop = chatBody.scrollHeight;
+                
+                setTimeout(() => {
+                    divWrapper.remove();
+                    resolve();
+                }, Math.random() * 500 + 300);
+            });
+        }
+
+        async function proximaMensagem() {
+            if (indiceAtual >= scriptConversa.length) return;
+            
+            btnAvancar.disabled = true;
+            
+            if (indiceAtual === 0) {
+                btnAvancar.innerHTML = `<span>Avançar Conversa</span> <i class="fas fa-arrow-down text-sm"></i>`;
+            }
+
+            await mostrarDigitando();
+
+            const mensagemData = scriptConversa[indiceAtual];
+            const elementoMensagem = criarMensagemElemento(mensagemData);
+            
+            chatBody.appendChild(elementoMensagem);
+            
+            setTimeout(() => {
+                chatBody.scrollTo({
+                    top: chatBody.scrollHeight,
+                    behavior: 'smooth'
+                });
+            }, 50);
+            
+            indiceAtual++;
+
+            if (indiceAtual === scriptConversa.length) {
+                btnAvancar.innerHTML = `<span>Simulação Finalizada</span> <i class="fas fa-check text-sm"></i>`;
+                btnAvancar.disabled = true;
+            } else {
+                btnAvancar.disabled = false;
+            }
+        }
+    </script>
+</body>
+</html>
