@@ -30,7 +30,7 @@ Este projeto apresenta um fluxograma visual detalhado de como organizar e gerenc
 
 Acesse a página diretamente:
 👉 [https://arthursilvarocha603-cloud.github.io/Projeto---Fluxo-de-atendimento/](https://arthursilvarocha603-cloud.github.io/Projeto---Fluxo-de-atendimento/)
-
+projeto alternativo: [http://amazing-cranachan-fa880b.netlify.app/]
 Ou abra o arquivo `index.html` no seu navegador local.
 
 ## 📱 Temas Abordados na Simulação
